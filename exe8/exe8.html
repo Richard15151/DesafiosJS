@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 8</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .perspective {
+          perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+      </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <header class="bg-blue-600 text-white p-4 text-center">
+        <h1 class="text-4xl font-bold">
+            Desafios de javaScript
+        </h1>
+    </header>
+    <main class="container mx-auto p-4 flex-grow relative flex justify-center items-center flex-col" >
+
+        <div class="flex justify-center items-center bg-gray-100">
+            <div id="card" class="relative w-100 h-80 perspective">
+              <div id="card-inner" class="transition-transform duration-500 transform-style-preserve-3d w-full h-full">
+                <!-- Frente -->
+                <div class="absolute w-full h-full bg-white rounded-xl shadow-xl backface-hidden flex items-center justify-center text-center p-4 flex-col">
+                    <h1 class="text-2xl font-bold" id="titulo">Desafio 8 - Menu interativo</h1>
+        <ul class="list-disc"  id="menuprincipal">
+            <li data-tipo="html" class="cursor-pointer p-1">
+                <span>HTML</span>
+                <span class="icone-ativo ml-2 hidden">✔</span>
+            </li>
+            <li data-tipo="css" class="cursor-pointer p-1">
+                <span>CSS</span>
+                <span class="icone-ativo ml-2 hidden">✔</span>
+            </li>
+            <li data-tipo="javascript" class="cursor-pointer p-1">
+                <span>JavaScript</span>
+                <span class="icone-ativo ml-2 hidden">✔</span>
+            </li>   
+        </ul>
+        <div id="caixa" id="caixa" class="h-30 w-70 bg-gray-200 rounded p-4 hidden border border-gray-300"></div>
+                </div>
+                <!-- Verso -->
+                <div class="absolute w-full h-full bg-blue-500 text-white rounded-xl shadow-xl backface-hidden transform rotate-y-180 flex items-center justify-center text-center p-4">
+                    <p>Esta solução usa event delegation no ul principal (#menuprincipal). Ao clicar, closest() identifica o li clicado (com data-tipo). O script gerencia o estado do item ativo atual. Funções auxiliares alternam os estilos visuais do item ativo (negrito, ícone) e exibem o conteúdo correspondente (armazenado em um objeto, acessado via data-tipo) na div (#caixa), tornando-a visível.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button id="flipBtn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Mostrar resolução</button>
+
+        
+
+
+
+        <a class="bg-blue-500 rounded m-px mt-4 text-white px-4 py-2 absolute bottom-0 left-10" href="../index.html">Voltar</a>
+        <a class="bg-blue-500 rounded m-px mt-4 text-white px-4 py-2 absolute bottom-0 right-10" href="../exe9/exe9.html">Próximo</a>
+        <a class="bg-blue-500 rounded m-px mt-4 text-white px-4 py-2 absolute bottom-0 left-30" href="../exe7/exe7.html">Desafio anterior</a>
+    </main>
+    <footer class="bg-gray-300 text-black p-4 text-center mt-10">
+        <p>&copy; 2025 Richard Oliveira</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

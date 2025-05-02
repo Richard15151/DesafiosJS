@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .perspective {
+          perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+      </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <header class="bg-blue-600 text-white p-4 text-center">
+        <h1 class="text-4xl font-bold">
+            Desafios de JavaScript
+        </h1>
+
+    </header>
+    <main class="container mx-auto p-4 flex-grow relative flex justify-center items-center flex-col" >
+
+        <div class="flex justify-center items-center bg-gray-100">
+            <div id="card" class="relative w-100 h-60 perspective">
+              <div id="card-inner" class="transition-transform duration-500 transform-style-preserve-3d w-full h-full">
+                <!-- Frente -->
+                <div class="absolute w-full h-full bg-white rounded-xl shadow-xl backface-hidden flex items-center justify-center text-center p-4 flex-col">
+                    <h1 class="text-2xl font-bold" id="titulo">Desafio 3 Manipulando com DOM</h1>
+                    <button class="bg-blue-500 rounded m-px mt-4 text-white px-4 py-2" id="botao">Mudar título</button>
+                </div>
+                <!-- Verso -->
+                <div class="absolute w-full h-full bg-blue-500 text-white rounded-xl shadow-xl backface-hidden transform rotate-y-180 flex items-center justify-center text-center p-4">
+                    <p>Este script primeiro obtém referências ao título (h1) e ao botão via getElementById. Um addEventListener no botão executa uma função que verifica o innerHTML atual do título usando uma estrutura if/else. Com base no texto existente, ele atualiza o innerHTML para a string alternativa, alternando o conteúdo do título a cada clique.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <button id="flipBtn" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Mostrar resolução</button>
+    
+
+        <a class="bg-blue-500 rounded m-px mt-4 text-white px-4 py-2 absolute bottom-0 left-10" href="../index.html">Voltar</a>
+        <a class="bg-blue-500 rounded m-px mt-4 text-white px-4 py-2 absolute bottom-0 right-10" href="../exe4/exe4.html">Próximo</a>
+        <a class="bg-blue-500 rounded m-px mt-4 text-white px-4 py-2 absolute bottom-0 left-30" href="../exe2/exe2.html">Desafio anterior</a>
+    </main>
+    <footer class="bg-gray-300 text-black p-4 text-center mt-10">
+        <p>&copy; 2025 Richard Oliveira</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
