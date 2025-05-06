@@ -57,6 +57,10 @@ Este projeto é uma coleção de 9 desafios práticos de JavaScript, ideal para 
     *   GitHub: [Richard15151](https://github.com/Richard15151)
     *   Email: richard.oliveira.senai@gmail.com
 
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+
 ## Direitos Autorais
 
 © 2025 Richard Oliveira. Todos os direitos reservados.
